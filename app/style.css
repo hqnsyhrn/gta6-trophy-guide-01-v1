@@ -1,0 +1,88 @@
+/* Leonida Platinum Guide — dark, dense, readable at a glance. Own look, no Rockstar art. */
+*{box-sizing:border-box}
+:root{
+  --bg:#0d1117; --panel:#151b24; --panel2:#1b2330; --line:#2a3442;
+  --text:#e8ecf1; --muted:#9aa7b8; --accent:#ffb454; --accent2:#4cc2ff;
+  --green:#3fce7c; --red:#ff6b6b; --amber:#ffc53d; --silver:#c3c9d4; --gold:#e8b93e;
+}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+h1{font-size:22px;letter-spacing:.5px;margin:0}
+h2{font-size:18px;margin:14px 0 6px}
+h3{font-size:14px;margin:0 0 6px}
+a{color:var(--accent2)}
+.top{display:flex;gap:18px;justify-content:space-between;align-items:flex-start;padding:14px 18px 10px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.sub{color:var(--muted);margin:4px 0 0;max-width:640px}
+.progresswrap{min-width:280px;flex:1;max-width:420px}
+.progresstext{font-weight:700;font-size:13px}
+.progressbar{height:12px;background:#232d3b;border-radius:6px;margin:6px 0;overflow:hidden}
+.progressfill{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),var(--green));transition:width .3s}
+.progresssub{color:var(--muted);font-size:12px}
+.audit{background:#10161f;border-bottom:1px solid var(--line);padding:8px 18px;font-size:12.5px;color:#cfe3ff;line-height:1.6}
+.audit b{color:#fff}
+.tabs{display:flex;gap:6px;padding:10px 18px 0;flex-wrap:wrap}
+.tabs button{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:6px 6px 0 0;padding:8px 14px;cursor:pointer;font-size:13px;font-weight:600}
+.tabs button.active{background:var(--accent);color:#1a1206;border-color:var(--accent)}
+.tabpage{padding:12px 18px 20px}
+.lede{color:var(--muted);margin:4px 0 12px;max-width:900px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:10px}
+.toolbar input[type=search]{flex:1;min-width:200px;padding:8px 10px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--text)}
+.toolbar select{padding:8px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--text)}
+.toolbar button{padding:8px 12px;border-radius:6px;border:1px solid var(--line);background:var(--panel2);color:var(--text);cursor:pointer;font-weight:600}
+.toolbar button:hover{border-color:var(--accent)}
+.spoiler{font-size:12.5px;color:var(--muted);display:flex;gap:6px;align-items:center}
+.nextupbox{background:#12202a;border:1px solid #234a5e;border-radius:8px;padding:10px 12px;margin-bottom:12px;font-size:13px}
+.nextupbox b{color:var(--accent2)}
+.nextupbox .nu-item{margin-right:16px;white-space:nowrap}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 430px;gap:14px;align-items:start}
+.listhead{color:var(--muted);font-size:12.5px;margin-bottom:6px}
+.tlist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.trow{display:grid;grid-template-columns:26px 1fr auto;gap:8px;align-items:start;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 10px;cursor:pointer}
+.trow:hover{border-color:var(--accent)}
+.trow.selected{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.trow.earned{opacity:.75}
+.trow input{width:18px;height:18px;margin-top:2px;accent-color:var(--green);cursor:pointer}
+.tname{font-weight:700;font-size:13.5px}
+.tname .hiddenTag{color:var(--amber);font-weight:600;font-size:11px}
+.tdesc{color:var(--muted);font-size:12.5px}
+.tmeta{font-size:11.5px;color:var(--muted);margin-top:3px;display:flex;gap:8px;flex-wrap:wrap}
+.badge{display:inline-block;padding:1px 7px;border-radius:10px;font-size:11px;font-weight:700;text-transform:uppercase}
+.badge.platinum{background:#e8eef7;color:#111}
+.badge.gold{background:var(--gold);color:#231a00}
+.badge.silver{background:var(--silver);color:#111}
+.badge.bronze{background:#b9784c;color:#fff}
+.honesty{font-weight:700;font-size:11px}
+.honesty.CONFIRMED{color:var(--green)}
+.honesty.SINGLE-SOURCE{color:var(--amber)}
+.honesty.UNCONFIRMED{color:var(--red)}
+.honesty.SOURCES-DISAGREE{color:#ff9d5c}
+
+.detail{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;position:sticky;top:10px;max-height:calc(100vh - 30px);overflow:auto}
+.detail h2{margin-top:0;font-size:17px}
+.detail .tdesc{font-size:13px;color:var(--text)}
+.detail .steps{margin:10px 0;padding-left:20px}
+.detail .steps li{margin-bottom:7px}
+.detail .steps li .cite{color:var(--accent2);font-weight:700}
+.detail .srcs{font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px;margin-top:10px}
+.detail .srcs a{margin-right:8px}
+.counterbox{display:flex;gap:8px;align-items:center;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 10px;margin:10px 0;font-weight:700}
+.counterbox button{width:28px;height:28px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--text);cursor:pointer;font-size:16px}
+.warnbox{background:#2a1a12;border:1px solid #7a4a22;border-radius:10px;padding:14px;margin:12px 0}
+.warnbox h3{color:#ffb454}
+.factbox{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px;margin:12px 0}
+.factbox p{margin:6px 0}
+.stage{border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:12px 14px;margin-bottom:10px}
+.stage h3{font-size:15px}
+.stage .smeta{color:var(--muted);font-size:12.5px;margin-bottom:8px}
+.stage .sbar{height:10px;background:#232d3b;border-radius:5px;overflow:hidden;margin:6px 0}
+.stage .sbar div{height:100%;background:var(--accent)}
+.stage ul{margin:6px 0;padding-left:18px;columns:2;column-gap:28px}
+.stage li{font-size:13px;margin-bottom:3px;break-inside:avoid}
+.nextlist li{margin-bottom:10px}
+.nextlist .why{color:var(--muted);font-size:12.5px}
+table.matrix{width:100%;border-collapse:collapse;font-size:13px;background:var(--panel)}
+table.matrix th,table.matrix td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+table.matrix th{background:var(--panel2)}
+.watchitem{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-bottom:8px}
+.foot{border-top:1px solid var(--line);padding:12px 18px;color:var(--muted);font-size:12px}
+@media (max-width:1020px){.layout{grid-template-columns:1fr}.detail{position:static;max-height:none}}

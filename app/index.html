@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Platinum Guide — GTA 6 Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="titleblock">
+    <h1>LEONIDA PLATINUM GUIDE</h1>
+    <p class="sub">GTA 6 — all 55 PlayStation trophies: official names, cited guides, roadmap &amp; tracker. Offline. No Rockstar art, our own words.</p>
+  </div>
+  <div class="progresswrap">
+    <div class="progresstext" id="progressText">0 / 55 earned — 0% to platinum</div>
+    <div class="progressbar"><div class="progressfill" id="progressFill"></div></div>
+    <div class="progresssub" id="progressSub">Difficulty 4/10 · ~200 h to platinum · 0 online trophies · 1 possibly missable</div>
+  </div>
+</header>
+<div class="audit" id="audit">Loading audit…</div>
+<nav class="tabs" id="tabs">
+  <button data-tab="checklist" class="active">Checklist</button>
+  <button data-tab="roadmap">Roadmap to Platinum</button>
+  <button data-tab="missables">Missables &amp; Watch</button>
+  <button data-tab="nextup">Next Up</button>
+  <button data-tab="sources">Source Matrix</button>
+</nav>
+
+<section id="tab-checklist" class="tabpage">
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search trophy name or guide…" aria-label="Search trophies">
+    <select id="kindFilter" aria-label="Filter by kind">
+      <option value="">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectible">Collectible</option>
+      <option value="activity">Activity</option>
+      <option value="crime">Crime</option>
+      <option value="side">Side</option>
+      <option value="money">Money</option>
+      <option value="world">World</option>
+      <option value="feat">Feat</option>
+    </select>
+    <select id="gradeFilter" aria-label="Filter by grade">
+      <option value="">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+    <select id="statusFilter" aria-label="Filter by status">
+      <option value="">All status</option>
+      <option value="earned">Earned</option>
+      <option value="todo">Not earned</option>
+    </select>
+    <label class="spoiler"><input type="checkbox" id="spoilerToggle"> Spoiler-safe: hide story names until earned</label>
+    <button id="exportBtn" type="button">Export save</button>
+    <button id="importBtn" type="button">Import save</button>
+    <input id="importFile" type="file" accept=".json,application/json" hidden>
+    <button id="resetBtn" type="button">Reset</button>
+  </div>
+  <div class="nextupbox" id="nextupBox"></div>
+  <div class="layout">
+    <div class="listcol">
+      <div class="listhead" id="listHead"></div>
+      <ul class="tlist" id="list"></ul>
+    </div>
+    <aside class="detail" id="detail" aria-live="polite"></aside>
+  </div>
+</section>
+
+<section id="tab-roadmap" class="tabpage" hidden>
+  <h2>Roadmap to the Platinum — S1 to S7</h2>
+  <p class="lede">Story first (60–80 h), then cleanup, then the 100% grind. Save at the start and end of every chapter — 15 manual slots, no mission replay, no New Game+.</p>
+  <div id="roadmap"></div>
+  <div class="factbox">
+    <h3>100% completion — what actually counts</h3>
+    <p>100% is about 60% of the game's true total content. The counted parts: <b>200 of 277 vehicles</b> scanned with the Waink app · <b>100 of 255 animals</b> spotted with binoculars · <b>300 counted stunts</b> (130 stunt jumps, 202 under-the-bridge, 40 knife flights, 25 base jumps — 397 exist) · <b>70 of 80 challenges</b> · <b>100 optional missions</b>. Trust the in-game tracker over any guide.</p>
+  </div>
+</section>
+
+<section id="tab-missables" class="tabpage" hidden>
+  <h2>Missables &amp; Watch</h2>
+  <div class="warnbox">
+    <h3>⚠ THE ONE POSSIBLY MISSABLE — Positive Mental Attitude (trophy 28)</h3>
+    <p><b>Chapter 1, after the Down to Earth mission:</b> in the morning, find Lucia in the kitchen, follow her to the balcony and choose <b>Accept</b> to meditate. It adds +1 to the meditation counter but is not a marked spot.</p>
+    <p><b>SOURCES DISAGREE — both versions shown:</b> (A) 18 meditations at 10 named places are needed. (B) 100% completion only needs 15, so the trophy may need fewer than 18. <b>Do all 18 to be safe.</b> Named spots: Capri sandbar, Buckskin Swamp, Camp Moonflower, Manifest Canyon, Moreau wheel, Kalaga mine tower, Tallaloko falls, Waning Sands rocks, Mount Kalaga summit.</p>
+  </div>
+  <div class="factbox">
+    <h3>Save discipline — read this before you start</h3>
+    <p>No mission replay. No New Game+. Cheats disable trophies <b>and</b> saving. 15 manual save slots — keep one save at the start and one at the end of every chapter, plus one right before the final mission and one before every major story choice from Chapter 4 onward.</p>
+  </div>
+  <div id="watchlist"></div>
+</section>
+
+<section id="tab-nextup" class="tabpage" hidden>
+  <h2>Next Up — what to do next, in roadmap order</h2>
+  <p class="lede">The planner lists your next unearned trophies in the order the roadmap says to earn them. Earn the top item, tick it, and the list moves on.</p>
+  <ol class="nextlist" id="nextup"></ol>
+</section>
+
+<section id="tab-sources" class="tabpage" hidden>
+  <h2>Source Matrix — 10 sources, read 20 Nov 2026</h2>
+  <p class="lede">Every guide cites its sources by number. A specific location or step with no citation earns no credit here — every step in this guide carries one. Guides are our own words; sources are cited, never copied. Official trophy names and descriptions are shown as PlayStation publishes them.</p>
+  <div id="sourceMatrix"></div>
+</section>
+
+<footer class="foot">
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games. Trophy names &amp; descriptions © PlayStation as published. Progress saves in this browser (localStorage) — export it to keep it safe.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>
